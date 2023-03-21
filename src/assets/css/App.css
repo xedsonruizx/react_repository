@@ -1,5 +1,15 @@
+/* @import 'react-bootstrap-sidebar-menu/dist/sidebar-menu.scss'; */
+@import "bootstrap/dist/css/bootstrap.min.css";
 .App {
   text-align: center;
+}
+
+html,
+body,
+#root {
+  height: 100vh;
+  padding: 0px;
+  margin: 0px;
 }
 
 .App-logo {
