@@ -11,33 +11,62 @@ $icon-size: 35px;
 // @import '../css/styles.scss';
 html,
 body,
+#root,
 .App {
   margin: 0;
-  height: 100vh;
+  min-height: 100% !important;
   color: #353535;
   font-family: sans-serif;
+  // background-color: rgba(128, 128, 128, 0.063);
+  background-image: url(../images/bg-body.jpg);
+  object-fit: cover !important;
+  // background-position: bottom;
 }
 
 #root {
-  height: 100%;
+  height: 100vh;
+  min-height: 100% !important;
 }
+
+
+
+// .css-dip3t8{
+//   background-image: url(../images/background.png);
+//   background-repeat: no-repeat;
+// }
 
 .css-dip3t8 {
-  background-image: url(../images/background.png);
-  color: white;
-}
+  background-color: rgba(249, 249, 249, 0) !important;
 
+}
 .css-16jkw2k > .ps-menu-button:hover {
   background-color: #f3f3f33b !important;
 }
 
+.css-1wvake5 {
+  position: fixed !important;
+  z-index: 7;
+  color: white;
+  border: 0px !important;
+  height: 100vh;
+  background-image: url(../images/background.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-attachment: fixed !important ;
+}
 
-// .css-1wvake5, .css-dip3t8, .css-1wvake5.ps-collapsed {
-//   border: 0px;
-// }
+.css-1wvake5.ps-collapsed {
+  height: 100vh;
+  width: 80px;
+  min-width: 80px;
+  position: fixed;
+  height: 100vh;
+  z-index: 10;
+  border: 0px;
+}
 
 .app {
-  height: 100%;
+  height: 100vh;
   display: flex;
   position: relative;
 
@@ -146,22 +175,283 @@ body,
   }
 }
 
+// Bar
+.bar-collapsed {
+  max-width: 80px !important;
+}
+
+.bar-not-collapsed {
+  position: fixed !important;
+  max-width: 245px !important;
+}
 // TOPBAR CSS
 .top-bar {
+  min-height: 50px;
   display: flex;
   position: fixed;
+  z-index: 2;
   top: 0;
   width: 100%;
   padding: 1em;
+  padding-right: 2em;
   background-image: url(../images/background.png);
-  margin-bottom:  2em;
-}
-.btn-toggle {
-  background-color: white ;
-  border: 0px;
-  border-radius: 5px;
+  margin-bottom: 2em;
 }
 
-.container{
+.welcome {
+  position: fixed;
+  top: 15px;
+  right: 1em;
+  z-index: 5;
+}
+
+.btn-toggle {
+  // top: 15px;
+  // left: 1em;
+  // position: fixed;
+  background-color: white;
+  border: 0px;
+  border-radius: 5px;
+  padding: 1px 4px;
+}
+// BODY
+.container {
   margin-top: 4em;
+}
+.main {
+  min-width: 100%;
+}
+
+
+// CARDS
+
+.card .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.container {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px 0;
+  border-radius: 10px;
+}
+.cards-container {
+  // height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-left: 0px;
+  padding-right: 0px;
+  border-radius: 10px;
+}
+
+.card {
+  max-width: 300px;
+  min-width: 260px;
+  height: 400px;
+  position: relative;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  margin: 25px 0;
+  width: 30%;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 700px) {
+  .card {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .card {
+    width: 90%;
+  }
+}
+.card .elms-animation,
+.card .content {
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+}
+.card .elms-animation {
+  z-index: 5;
+}
+.card .elms-animation span {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 0;
+  width: 0;
+  transition: all 0.5s ease-out;
+}
+.card .elms-animation span.one {
+  top: 0;
+  left: 0;
+  border-top-left-radius: 10px;
+}
+.card .elms-animation span.two {
+  top: 0;
+  right: 0;
+  border-top-right-radius: 10px;
+}
+.card .elms-animation span.three {
+  left: 0;
+  bottom: 0;
+  border-bottom-left-radius: 10px;
+}
+.card .elms-animation span.four {
+  right: 0;
+  bottom: 0;
+  border-bottom-right-radius: 10px;
+}
+
+.card:hover .elms-animation span {
+  width: 50%;
+  height: 50%;
+}
+
+.card img {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 10px;
+}
+
+.card .content {
+  z-index: 6;
+  visibility: hidden;
+}
+.card:hover .content {
+  animation: show 0.3s 0.4s linear forwards;
+}
+.card .content button {
+  padding: 0.6rem 1.3rem;
+  border: 3px solid #fff;
+  background: transparent;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.button.disabled,
+.button:disabled,
+fieldset:disabled .button {
+  pointer-events: none;
+  opacity: 0.65;
+}
+
+.card .content button:hover {
+  background: #fff;
+  color: #333;
+}
+
+
+.carousel{
+  background: #8080809c;
+  border-radius: 15px;
+}
+
+.carrousel-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 20px;
+  border-radius: 10px;
+}
+
+.carousel .carousel-status {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px;
+  font-size: 10px;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.9);
+  color: #141619;
+  font-size: 15px;
+}
+.thumbs-wrapper{
+  display: none;
+}
+
+
+@keyframes show {
+  to {
+    visibility: visible;
+  }
+}
+
+// PRESENTATION
+.bg-blue {
+  background-color: rgb(176, 176, 216);
+  clip-path: polygon(
+    50% 0%,
+    80% 10%,
+    100% 35%,
+    100% 70%,
+    80% 90%,
+    50% 100%,
+    20% 90%,
+    0% 70%,
+    0% 35%,
+    20% 10%
+  );
+  text-size-adjust: auto;
+}
+
+.presentation-proyects {
+  background-image: url(../images/bg-proyects.jpg);
+  mix-blend-mode: multiply;
+  clip-path: polygon(
+    50% 0%,
+    80% 10%,
+    100% 35%,
+    100% 70%,
+    80% 90%,
+    50% 100%,
+    20% 90%,
+    0% 70%,
+    0% 35%,
+    20% 10%
+  );
+  text-size-adjust: auto;
+  color: white;
+  padding: 20px;
+  max-width: 500px;
+}
+.proyect-tabs {
+  max-width: 300px;
+  min-width: 260px;
+  width: 30%;
+}
+
+@media screen and (min-width: 768px) {
+  .presentation-proyects {
+    clip-path: polygon(
+      50% 0%,
+      80% 10%,
+      100% 35%,
+      100% 70%,
+      80% 90%,
+      50% 100%,
+      20% 90%,
+      0% 70%,
+      0% 35%,
+      20% 10%
+    );
+    padding: 20px;
+    max-width: 500px;
+  }
 }
