@@ -9,7 +9,9 @@ $icon-bg-color: rgba(255, 255, 255, 0.05);
 $icon-size: 35px;
 
 // @import '../css/styles.scss';
-html,body, .App {
+html,
+body,
+.App {
   margin: 0;
   height: 100vh;
   color: #353535;
@@ -25,23 +27,24 @@ html,body, .App {
   color: white;
 }
 
-.css-16jkw2k >.ps-menu-button:hover {
+.css-16jkw2k > .ps-menu-button:hover {
   background-color: #f3f3f33b !important;
 }
 
 
-
+// .css-1wvake5, .css-dip3t8, .css-1wvake5.ps-collapsed {
+//   border: 0px;
+// }
 
 .app {
   height: 100%;
   display: flex;
   position: relative;
-  
+
   .btn-toggle {
     cursor: pointer;
     display: none;
   }
-
 
   .sidebar-btn-wrapper {
     display: flex;
@@ -87,7 +90,7 @@ html,body, .App {
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-    
+
     header {
       margin-bottom: 16px;
       border-bottom: 1px solid #efefef;
@@ -141,4 +144,24 @@ html,body, .App {
     color: #000000;
     background: #ffd331;
   }
+}
+
+// TOPBAR CSS
+.top-bar {
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1em;
+  background-image: url(../images/background.png);
+  margin-bottom:  2em;
+}
+.btn-toggle {
+  background-color: white ;
+  border: 0px;
+  border-radius: 5px;
+}
+
+.container{
+  margin-top: 4em;
 }

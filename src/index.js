@@ -3,18 +3,32 @@ import ReactDOM from "react-dom/client";
 import "./assets/css/index.css";
 import App from "./App";
 import reportWebVitals from "./assets/js/reportWebVitals";
-import { BrowserRouter } from "react-router-dom";
 import { ProSidebarProvider } from "react-pro-sidebar";
+import { BrowserRouter, Route, Routes, Redirect } from "react-router-dom";
+
+
+import Layout from "./components/Layout";
+import Home from "./pages/Home";
+import Profile from "./pages/Profile";
+import Proyects from "./pages/Proyects";
+import NoPage from "./pages/NotFound";
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <ProSidebarProvider>
+  <ProSidebarProvider>
+    {/* <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="Home" element={<Profile />} />
+          <Route path="contact" element={<Proyects />} />
+          <Route path="*" element={<NoPage />} />
+        </Route>
+      </Routes> */}
       <App />
-    </ProSidebarProvider>
-    ;
-  </React.StrictMode>
+  </ProSidebarProvider>
 );
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
