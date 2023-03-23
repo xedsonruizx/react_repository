@@ -8,7 +8,7 @@ const FirstSlider = () => (
   <div>
     <div className="carrousel-item">
       {/* <!-- first card --> */}
-      <div className="card">
+      <div className="card-2 card">
         <div className="elms-animation">
           <span className="one"></span>
           <span className="two"></span>
@@ -45,7 +45,7 @@ const FirstSlider = () => (
         </div>
       </div>
       {/* <!-- second card --> */}
-      <div className="card">
+      <div className="card-2 card">
         <div className="elms-animation">
           <span className="one"></span>
           <span className="two"></span>
@@ -86,7 +86,7 @@ const FirstSlider = () => (
         </div>
       </div>
       {/* <!-- third card --> */}
-      <div className="card">
+      <div className="card-2 card">
         <div className="elms-animation">
           <span className="one"></span>
           <span className="two"></span>
@@ -127,7 +127,7 @@ const FirstSlider = () => (
         </div>
       </div>
       {/* <!-- four card --> */}
-      <div className="card">
+      <div className="card-2 card">
         <div className="elms-animation">
           <span className="one"></span>
           <span className="two"></span>
@@ -167,7 +167,7 @@ const FirstSlider = () => (
       </div>
 
       {/* <!-- five card --> */}
-      <div className="card">
+      <div className="card-2 card">
         <div className="elms-animation">
           <span className="one"></span>
           <span className="two"></span>
@@ -205,7 +205,7 @@ const FirstSlider = () => (
         </div>
       </div>
       {/* <!-- six card --> */}
-      <div className="card">
+      <div className="card-2 card">
         <div className="elms-animation">
           <span className="one"></span>
           <span className="two"></span>

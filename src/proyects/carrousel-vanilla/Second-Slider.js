@@ -7,7 +7,7 @@ import { Carousel } from "react-responsive-carousel";
 const SecondSlider = () => (
   <div className="carrousel-item">
     {/* <!-- first card --> */}
-    <div className="card">
+    <div className="card-2 card">
       <div className="elms-animation">
         <span className="one"></span>
         <span className="two"></span>
@@ -44,7 +44,7 @@ const SecondSlider = () => (
       </div>
     </div>
     {/* <!-- second card --> */}
-    <div className="card">
+    <div className="card-2 card">
       <div className="elms-animation">
         <span className="one"></span>
         <span className="two"></span>
@@ -85,7 +85,7 @@ const SecondSlider = () => (
       </div>
     </div>
     {/* <!-- third card --> */}
-    <div className="card">
+    <div className="card-2 card">
       <div className="elms-animation">
         <span className="one"></span>
         <span className="two"></span>
@@ -126,7 +126,7 @@ const SecondSlider = () => (
       </div>
     </div>
     {/* <!-- four card --> */}
-    <div className="card">
+    <div className="card-2 card">
       <div className="elms-animation">
         <span className="one"></span>
         <span className="two"></span>
@@ -166,7 +166,7 @@ const SecondSlider = () => (
     </div>
 
     {/* <!-- five card --> */}
-    <div className="card">
+    <div className="card-2 card">
       <div className="elms-animation">
         <span className="one"></span>
         <span className="two"></span>
@@ -204,7 +204,7 @@ const SecondSlider = () => (
       </div>
     </div>
     {/* <!-- six card --> */}
-    <div className="card">
+    <div className="card-2 card">
       <div className="elms-animation">
         <span className="one"></span>
         <span className="two"></span>

@@ -20,15 +20,14 @@ body,
   // background-color: rgba(128, 128, 128, 0.063);
   background-image: url(../images/bg-body.jpg);
   object-fit: cover !important;
-  // background-position: bottom;
+  background-attachment: fixed;
+  background-position: center left;
 }
 
 #root {
   height: 100vh;
   min-height: 100% !important;
 }
-
-
 
 // .css-dip3t8{
 //   background-image: url(../images/background.png);
@@ -37,11 +36,13 @@ body,
 
 .css-dip3t8 {
   background-color: rgba(249, 249, 249, 0) !important;
-
 }
 .css-16jkw2k > .ps-menu-button:hover {
   background-color: #f3f3f33b !important;
 }
+// .css-16jkw2k >.ps-menu-button{
+//   background-color: #0000000b !important;
+// }
 
 .css-1wvake5 {
   position: fixed !important;
@@ -49,9 +50,10 @@ body,
   color: white;
   border: 0px !important;
   height: 100vh;
-  background-image: url(../images/background.png);
+  background-image: url(../images/bg-2.jpg);
   background-repeat: no-repeat;
-  background-position: left;
+  background-position: left top;
+  background-size: cover;
   background-attachment: fixed !important ;
 }
 
@@ -153,6 +155,9 @@ body,
     .btn-toggle {
       display: flex;
     }
+    .welcome {
+      color: white;
+    }
   }
 }
 
@@ -194,12 +199,20 @@ body,
   width: 100%;
   padding: 1em;
   padding-right: 2em;
-  background-image: url(../images/background.png);
+  background-image: url(../images/bg-2.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position:top left;
+  // background-color: #888888b5;
   margin-bottom: 2em;
 }
 
 .welcome {
   position: fixed;
+  font-weight: 700;
+  color: black;
+  // background-color: #0000005e;
   top: 15px;
   right: 1em;
   z-index: 5;
@@ -222,10 +235,9 @@ body,
   min-width: 100%;
 }
 
-
 // CARDS
 
-.card .content {
+.card-2 .content {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -250,7 +262,7 @@ body,
   border-radius: 10px;
 }
 
-.card {
+.card-2 {
   max-width: 300px;
   min-width: 260px;
   height: 400px;
@@ -262,17 +274,18 @@ body,
 }
 
 @media screen and (max-width: 700px) {
-  .card {
+  .card-2 {
     width: 45%;
   }
+  
 }
 @media screen and (max-width: 500px) {
-  .card {
+  .card-2 {
     width: 90%;
   }
 }
-.card .elms-animation,
-.card .content {
+.card-2 .elms-animation,
+.card-2 .content {
   border-radius: 10px;
   position: absolute;
   top: 0;
@@ -280,43 +293,43 @@ body,
   height: 100vh;
   width: 100%;
 }
-.card .elms-animation {
+.card-2 .elms-animation {
   z-index: 5;
 }
-.card .elms-animation span {
+.card-2 .elms-animation span {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.6);
   height: 0;
   width: 0;
   transition: all 0.5s ease-out;
 }
-.card .elms-animation span.one {
+.card-2 .elms-animation span.one {
   top: 0;
   left: 0;
   border-top-left-radius: 10px;
 }
-.card .elms-animation span.two {
+.card-2 .elms-animation span.two {
   top: 0;
   right: 0;
   border-top-right-radius: 10px;
 }
-.card .elms-animation span.three {
+.card-2 .elms-animation span.three {
   left: 0;
   bottom: 0;
   border-bottom-left-radius: 10px;
 }
-.card .elms-animation span.four {
+.card-2 .elms-animation span.four {
   right: 0;
   bottom: 0;
   border-bottom-right-radius: 10px;
 }
 
-.card:hover .elms-animation span {
+.card-2:hover .elms-animation span {
   width: 50%;
   height: 50%;
 }
 
-.card img {
+.card-2 img {
   height: 100vh;
   width: 100%;
   object-fit: cover;
@@ -325,14 +338,14 @@ body,
   border-radius: 10px;
 }
 
-.card .content {
+.card-2 .content {
   z-index: 6;
   visibility: hidden;
 }
-.card:hover .content {
+.card-2:hover .content {
   animation: show 0.3s 0.4s linear forwards;
 }
-.card .content button {
+.card-2 .content button {
   padding: 0.6rem 1.3rem;
   border: 3px solid #fff;
   background: transparent;
@@ -350,18 +363,17 @@ fieldset:disabled .button {
   opacity: 0.65;
 }
 
-.card .content button:hover {
+.card-2 .content button:hover {
   background: #fff;
   color: #333;
 }
 
-
-.carousel{
+.carousel {
   background: #8080809c;
   border-radius: 15px;
 }
 
-.carrousel-item{
+.carrousel-item {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -378,14 +390,13 @@ fieldset:disabled .button {
   right: 0;
   padding: 5px;
   font-size: 10px;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.9);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9);
   color: #141619;
   font-size: 15px;
 }
-.thumbs-wrapper{
+.thumbs-wrapper {
   display: none;
 }
-
 
 @keyframes show {
   to {
@@ -436,7 +447,12 @@ fieldset:disabled .button {
   min-width: 260px;
   width: 30%;
 }
-
+@media screen and (max-width: 900px) {
+  
+  .welcome {
+    color: white;
+  }
+}
 @media screen and (min-width: 768px) {
   .presentation-proyects {
     clip-path: polygon(
@@ -454,4 +470,90 @@ fieldset:disabled .button {
     padding: 20px;
     max-width: 500px;
   }
+}
+
+.box-frame {
+  -webkit-clip-path: polygon(
+    0% 0%,
+    0% 100%,
+    25% 100%,
+    25% 25%,
+    75% 25%,
+    75% 75%,
+    25% 75%,
+    25% 100%,
+    100% 100%,
+    100% 0%
+  );
+  clip-path: polygon(
+    0% 0%,
+    0% 100%,
+    25% 100%,
+    25% 25%,
+    75% 25%,
+    75% 75%,
+    25% 75%,
+    25% 100%,
+    100% 100%,
+    100% 0%
+  );
+  background-image: url("https://www.cssportal.com/css-clip-path-generator/pics/north.jpg");
+}
+
+.slit-in-vertical {
+  -webkit-animation: slit-in-vertical 0.6s ease-out both;
+  animation: slit-in-vertical 0.6s ease-out both;
+}
+@-webkit-keyframes slit-in-vertical {
+  0% {
+    -webkit-transform: translateZ(-800px) rotateY(90deg);
+    transform: translateZ(-800px) rotateY(90deg);
+    opacity: 0;
+  }
+  54% {
+    -webkit-transform: translateZ(-160px) rotateY(87deg);
+    transform: translateZ(-160px) rotateY(87deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateZ(0) rotateY(0);
+    transform: translateZ(0) rotateY(0);
+  }
+}
+@keyframes slit-in-vertical {
+  0% {
+    -webkit-transform: translateZ(-800px) rotateY(90deg);
+    transform: translateZ(-800px) rotateY(90deg);
+    opacity: 0;
+  }
+  54% {
+    -webkit-transform: translateZ(-160px) rotateY(87deg);
+    transform: translateZ(-160px) rotateY(87deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateZ(0) rotateY(0);
+    transform: translateZ(0) rotateY(0);
+  }
+}
+
+.grid-parent {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 21px;
+  grid-row-gap: 0px;
+}
+
+.grid-div1 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.grid-div2 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.grid-div3 {
+  grid-area: 1 / 3 / 2 / 4;
+}
+.grid-div4 {
+  grid-area: 1 / 4 / 2 / 5;
 }

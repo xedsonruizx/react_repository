@@ -57,25 +57,28 @@ const Layout = ({}) => {
               icon={<FaStarOfDavid className="fs-3" />}
               component={<Link to="/" />}
             >
-              Home
+              
+              <strong>Home</strong>
             </MenuItem>
             <MenuItem
               icon={<BsFillPersonVcardFill className="fs-3" />}
               component={<Link to="/about" />}
             >
-              About me
+              
+              <strong>About me</strong>
             </MenuItem>
             <MenuItem
               icon={<FaHammer className="fs-3" />}
               component={<Link to="/my-proyect" />}
             >
-              My Proyects
+              
+              <strong>My Proyects</strong>
             </MenuItem>
             <MenuItem
               icon={<BsBookFill className="fs-3" />}
               component={<Link to="/academic" />}
             >
-              Academic
+              <strong>Academic</strong>
             </MenuItem>
             <MenuItem
               icon={<FaHammer />}
@@ -90,7 +93,7 @@ const Layout = ({}) => {
         <div className="w-100 h-100">
           <header className="top-bar d-flex justify-content-between">
             <div className="position-relative">
-              <span className="welcome text-white">
+              <span className="welcome">
                 Welcome to my repository
               </span>
             </div>
@@ -107,6 +110,7 @@ const Layout = ({}) => {
             </div>
           </main>
         </div>
+        
       </BrowserRouter>
     </div>
   );
