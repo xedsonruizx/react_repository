@@ -4,7 +4,8 @@ import React from "react";
 
 const Academic = () => (
   <div>
-    <h1 className="title is-1">This is the Home Page</h1>
+    <h1 className="title is-1">Mira mama mi primera web en react</h1>
+    <img src={require("../assets/images/justfun.jpeg")} alt="" />
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida,
       risus at dapibus aliquet, elit quam scelerisque tortor, nec accumsan eros
