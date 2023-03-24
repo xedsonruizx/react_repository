@@ -11,7 +11,7 @@ import SecondSlider from "./carrousel-vanilla/Second-Slider";
 const Vanilla = () => (
   <div>
     {/* <!-- CARDS --> */}
-    <Carousel className="cards-container mt-5">
+    <Carousel className="cards-container mt-5" showThumbs={false}>
       <FirstSlider></FirstSlider>
       <SecondSlider></SecondSlider>
     </Carousel>
